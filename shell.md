@@ -1,9 +1,9 @@
 ## shell环境
 Shell只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。Linux 的 Shell 种类众多，常见的有：
-Bourne Shell（/usr/bin/sh或/bin/sh）:是UNIX最初使用的 shell，而且在每种 UNIX 上都可以使用。Bourne Shell 在 shell 编程方面相当优秀，但在处理与用户的交互方面做得不如其他几种 shell。
-Bourne Again Shell（/bin/bash): LinuxOS 默认的，它是 Bourne Shell 的扩展。与 Bourne Shell 完全兼容，并且在 Bourne Shell 的基础上增加了很多特性。可以提供命令补全，命令编辑和命令历史等功能。它还包含了很多 C Shell 和 Korn Shell 中的优点，有灵活和强大的编辑接口，同时又很友好的用户界面。
-C Shell（/usr/bin/csh）:是一种比 Bourne Shell更适合的变种 Shell，它的语法与 C 语言很相似。
-K Shell（/usr/bin/ksh）:集合了 C Shell 和 Bourne Shell 的优点并且和 Bourne Shell 完全兼容。
+1.Bourne Shell（/usr/bin/sh或/bin/sh）:是UNIX最初使用的 shell，而且在每种 UNIX 上都可以使用。Bourne Shell 在 shell 编程方面相当优秀，但在处理与用户的交互方面做得不如其他几种 shell。
+2.Bourne Again Shell（/bin/bash): LinuxOS 默认的，它是 Bourne Shell 的扩展。与 Bourne Shell 完全兼容，并且在 Bourne Shell 的基础上增加了很多特性。可以提供命令补全，命令编辑和命令历史等功能。它还包含了很多 C Shell 和 Korn Shell 中的优点，有灵活和强大的编辑接口，同时又很友好的用户界面。
+3.C Shell（/usr/bin/csh）:是一种比 Bourne Shell更适合的变种 Shell，它的语法与 C 语言很相似。
+4.K Shell（/usr/bin/ksh）:集合了 C Shell 和 Bourne Shell 的优点并且和 Bourne Shell 完全兼容。
 在一般情况下，人们并不区分 Bourne Shell 和 Bourne Again。，所以，像 #!/bin/sh，它同样也可以改为 #!/bin/bash。#! 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 程序。
 ## 运行 Shell 脚本有两种方法：
 1.作为可执行程序
@@ -128,19 +128,22 @@ bash支持一维数组（不支持多维数组），并且没有限定数组的�
 length=${#array_name[@]}
 ### 取得数组单个元素的长度
 length=${#array_name[n]}
-```
-数组的遍历：
+### 数组的遍历：
 
 ```
+
 num=("a" "b" "c" "d")
 
 FOR循环遍历输出数组
+
 for i in ${num[@]}
 do
   echo $i
 done
 
+
 WHILE循环输出
+
 i=0
 while [ $i -lt ${#num[@]} ]
 do
@@ -148,7 +151,9 @@ do
   let i++
 done
 ```
+
 ## shell传递参数：
+
 
 | 参数处理 | 说明 |
 | :-- | :-- |
